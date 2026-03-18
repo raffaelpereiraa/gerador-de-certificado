@@ -19,8 +19,5 @@ export const routes: Routes = [
     path: "certificados/:id",
     component: Certificado
 },
-
-
-
    
 ];

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SecondaryButton } from "../../components/secondary-button/secondary-button";
-import { RouterLink } from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
+
 
 @Component({
   selector: 'app-certificado',
@@ -9,5 +10,7 @@ import { RouterLink } from "@angular/router";
   styleUrl: './certificado.scss',
 })
 export class Certificado {
+
+  constructor(private router: Router) {}
 
 }
