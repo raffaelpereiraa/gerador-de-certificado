@@ -20,9 +20,10 @@ export class CertificadoForm {
   // array de lista de atividades
 
     certificado: Certificado ={
+    id: '',
     atividades: [],
     nome: '',
-    dataEmissao: ''
+    dataEmissao: '',
 
   };
 
