@@ -1,14 +1,26 @@
+<!-- navbar → estilo base do Bootstrap
+ navbar-expand-lg → expande a navbar em telas grandes (responsiva) -->
 <nav class="navbar navbar-expand-lg">
+    <!-- container Faz a navbar ocupar toda a largura da tela -->
     <div class="container-fluid">
         <a routerLink="/" class= "navbar-logo">
             <img src="navbar/Logo.svg" alt="Logo">
         </a>
+            <!-- collapse navbar-collapse → comportamento responsivo (menu colapsável)
+            justify-content-end → joga o menu pra direita -->
             <div class= "collapse navbar-collapse justify-content-end">
+                <!-- Lista de itens da navbar -->
                 <ul class="navbar-nav">
+                    <!-- d-flex align-items-center → alinha ícone + texto -->
                     <li class="nav-item d-flex align-items-center">
                         <i class="ph ph-medal active"></i>
+
+                        <!-- routerLink="/" → vai para a home
+                        routerLinkActive="active" → adiciona classe quando estiver na rota
+                        [routerLinkActiveOptions]="{ exact: true }" → só ativa se for exatamente "/" -->
                         <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link ">Lista de Certificados</a>
                     </li>
+                    <!-- ms-3 → margem à esquerda (espaço entre itens) -->
                     <li class="nav-item d-flex align-items-center ms-3">
                         <i class="ph ph-circles-three-plus"></i>
                         <a routerLink="/certificados/novo" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Gerar Certificado</a>

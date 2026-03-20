@@ -1,7 +1,18 @@
+<!-- card → padrão do Bootstrap (caixinha com sombra/borda)
+p-3 → padding interno (espaçamento)
+custom-card → sua classe personalizada -->
+
+<!-- Isso aqui é Flexbox (Bootstrap)
+d-flex → ativa flexbox
+justify-content-between → joga um item pra esquerda e outro pra direita
+align-items-center → alinha verticalmente no centro -->
+
 <div class="card p-3 custom-card">
     <div class="d-flex justify-content-between align-items-center">
             <div>
+                <!-- fw-bold → texto em negrito (Bootstrap) -->
                 <div class="fw-bold nome-aluno">Nome do Aluno</div>
+                <!-- small → texto menor -->
                 <small class="small-date">Gerado em 00/00/0000</small>
                 </div>
             <app-secondary-button textoAdicionar="Ver" (click)="redirecionaCertificado()" ></app-secondary-button>

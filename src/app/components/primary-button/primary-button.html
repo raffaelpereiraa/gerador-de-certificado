@@ -1,4 +1,17 @@
+<!-- ngStyle- Isso é data binding (ligação com o TypeScript)
 
-<button [ngStyle]="disabled ? {'opacity': '50%'} : {}" class="custom-button" class="custom-button">
+O que está acontecendo:
+Se disabled for true: opacity: 50%;
+botão fica “apagado” (transparente)
+
+Se disabled for false:
+{}
+não aplica estilo -->
+
+<!-- {{textoBotao}} O texto do botão é dinâmico -->
+
+<!-- ? - operador ternario - isso é um if simplificado (ternário) -->
+
+<button [ngStyle]="disabled ? {'opacity': '0.5'} : {}" class="custom-button">
     {{textoBotao}}
 </button>

@@ -12,8 +12,10 @@ export class ItemCertificado {
 
   id: string = '6';
 
+  // Injeção de dependência: Isso permite navegar entre rotas
   constructor(private router: Router) {}
 
+  // Router → responsável por navegação entre páginas
   redirecionaCertificado(){
   this.router.navigate(['/certificados', 2]) //  rota -- /certificados/2
   // this.router.navigateByUrl("certificados" + this.id) //  rota -- /certificados/2

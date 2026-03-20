@@ -9,7 +9,13 @@ import { Router, RouterLink } from "@angular/router";
   templateUrl: './certificado.html',
   styleUrl: './certificado.scss',
 })
+
 export class Certificado {
+
+// constructor roda quando o componente nasce
+// Router é o serviço de navegação
+// private router cria e guarda a variável
+// Angular injeta automaticamente
 
   constructor(private router: Router) {}
 
