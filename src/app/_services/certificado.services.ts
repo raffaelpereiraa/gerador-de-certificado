@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Certificado } from '../interfaces/certificado';
-
+import { CertificadoModel } from '../interfaces/certificado';
 
 @Injectable({
   providedIn: 'root',
@@ -8,13 +7,14 @@ import { Certificado } from '../interfaces/certificado';
 
 export class CertificadoServices {
 
-  certificados: Certificado [] = [];
+  certificados: CertificadoModel [] = [];
 
   constructor() {}
 
-  adicionarCertificado(certificado: Certificado) {
-    this.certificados.push(certificado);
+  adicionarCertificado(certificado: CertificadoModel) {
+    this.certificados.push({...certificado});
     console.log (this.certificados);
+    localStorage.setItem('certificados', JSON.stringify(this.certificados))
   }
   
 }

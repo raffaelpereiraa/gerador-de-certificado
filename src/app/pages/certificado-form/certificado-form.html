@@ -51,7 +51,7 @@ d-flex flex-column → layout em coluna -->
 
            <!-- (click) → chama função
             [disabled] → desativa se vazio -->
-           <app-secondary-button (click)="adicionarAtividade()" [disabled]="atividade.length == 0" textoAdicionar="Adicionar" phClass="ph ph-plus"></app-secondary-button>
+           <app-secondary-button (click)="adicionarAtividade()" [disabled]=" ! atividade || atividade.length == 0" textoAdicionar="Adicionar" phClass="ph ph-plus"></app-secondary-button>
 
         </div>
 

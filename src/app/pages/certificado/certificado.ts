@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SecondaryButton } from "../../components/secondary-button/secondary-button";
-import { RouterLink } from "@angular/router";
+import { ActivatedRoute, RouterLink } from "@angular/router";
 import { CertificadoServices } from '../../_services/certificado.services';
-
+import { CertificadoModel } from '../../interfaces/certificado';
 
 @Component({
   selector: 'app-certificado',
@@ -11,14 +11,24 @@ import { CertificadoServices } from '../../_services/certificado.services';
   styleUrl: './certificado.scss',
 })
 
-export class Certificado implements OnInit {
+export class CertificadoComponent implements OnInit {
 
- constructor (private certificadoServices: CertificadoServices) {}
+
+  id: string | null = null;
+  certificado: CertificadoModel | undefined
+
+ constructor (private certificadoServices: CertificadoServices, private route: ActivatedRoute) {}
 
  ngOnInit(): void {
-   console.log( this.certificadoServices.certificados);
- }
-  
+
+  this.route.paramMap.subscribe(params => {
+    this.id = params.get('id');
+    this.certificado = this.certificadoServices.certificados.find(item => item.id == this.id);
+    console.log(this.certificado)
+   
+ })
+
+  }
 }
 
 // constructor roda quando o componente nasce

@@ -3,7 +3,7 @@ import { ItemCertificado } from "../../components/item-certificado/item-certific
 import { SecondaryButton } from "../../components/secondary-button/secondary-button";
 import { RouterLink } from "@angular/router";
 import { CertificadoServices } from '../../_services/certificado.services';
-import { Certificado } from '../../interfaces/certificado';
+import { CertificadoModel } from '../../interfaces/certificado';
 
 @Component({
   selector: 'app-certificados',
@@ -13,7 +13,7 @@ import { Certificado } from '../../interfaces/certificado';
 })
 export class Certificados implements OnInit {
 
-  certificados: Certificado [] = []
+  certificados: CertificadoModel [] = []
 
   constructor(private certificadoServices: CertificadoServices) {}
 
