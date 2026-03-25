@@ -14,19 +14,5 @@ import { CommonModule, NgClass } from '@angular/common';
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
-export class Navbar implements OnInit {
-
-  // método que o Angular executa automaticamente quando o componente é inicializado. Buscar dados (API), carregar informações iniciais, Ler parâmetros da rota
-  ngOnInit(): void {
-    // this significa: “este objeto aqui”, “chama a função mensagem que pertence a esse componente”
-    this.mensagem();
-
-  }
-
-  // Só imprime no console
-  mensagem() {
-        console.log('O componente Navbar foi inicializado (dentro  de uma função).');
-  } 
-
-
+export class Navbar  {
 }
