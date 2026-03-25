@@ -24,7 +24,6 @@ export class CertificadoComponent implements OnInit {
   this.route.paramMap.subscribe(params => {
     this.id = params.get('id');
     this.certificado = this.certificadoServices.certificados.find(item => item.id == this.id);
-    console.log(this.certificado)
    
  })
 

@@ -9,10 +9,11 @@ w-100 → ocupa toda largura -->
         </div>
 
         <!-- componente reutilizável -->
-        <app-secondary-button></app-secondary-button>
+        <app-secondary-button phClass="ph ph-download-simple" textoAdicionar="Download"></app-secondary-button>
     </div>
 
-    <div class="certificado d-flex justify-content-center align-items-center">
+    @if (certificado) {
+        <div class="certificado d-flex justify-content-center align-items-center">
         <img class="icone-medalha" src="certificate/Certificate_Ribbon.png" alt="icone de medalha">
 
             <div class="conteudo-certificado">
@@ -23,19 +24,21 @@ w-100 → ocupa toda largura -->
                             <p>Este certificado comprova que</p>
                         </div>
 
-                            <p class="nome-aluno">Nome do Aluno</p>
+                            <p class="nome-aluno"> {{certificado.nome}} </p>
 
                         <div>
                             <p class="lista-atividade-titulo">Concluiu com sucesso as seguintes atividades:</p>
-                            <p class="lista-atividade">Introdução ao Angular, Configuração com Angular CLI, Criação de componentes reutilizáveis, Manipulação de dados, Implementação de data binding, Criação de rotas com Angular Router, Consumo de APIs REST.</p>
+                            <p class="lista-atividade"> {{certificado.atividades.join(', ')}} </p>
                         </div>
 
                     </div>
-                            <p class="data-emissao">Emitido em: 01/01/2026</p>
+                            <p class="data-emissao">Emitido em: {{certificado.dataEmissao}} </p>
                 
             </div>
                        
     </div>
+
+    }
 
 </div>
 
