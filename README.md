@@ -108,7 +108,6 @@ O projeto está hospedado na plataforma **Netlify**, permitindo acesso público 
 
 ## 🧩 Possíveis Melhorias Futuras
 
-* 🔧 Download do certificado em PDF
 * 🎨 Mais templates de certificados
 * 🔐 Sistema de autenticação de usuários
 * 📊 Integração com banco de dados
