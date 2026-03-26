@@ -106,15 +106,6 @@ O projeto está hospedado na plataforma **Netlify**, permitindo acesso público 
 
 ---
 
-## 📸 Demonstração
-
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
-
----
-
 ## 🧩 Possíveis Melhorias Futuras
 
 * 🔧 Download do certificado em PDF
